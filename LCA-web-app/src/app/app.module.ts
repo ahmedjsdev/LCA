@@ -4,6 +4,9 @@ import { MDBBootstrapModule } from 'angular-bootstrap-md';
 
 import { AppComponent } from './app.component';
 
+
+// Firebase Service 
+import { FirebaseService } from '../app/providers/firebase.service';
 @NgModule({
   declarations: [
     AppComponent,
@@ -13,7 +16,7 @@ import { AppComponent } from './app.component';
     BrowserModule,
     MDBBootstrapModule.forRoot()
   ],
-  providers: [],
+  providers: [FirebaseService],
   bootstrap: [AppComponent],
   schemas: [NO_ERRORS_SCHEMA]
 })
