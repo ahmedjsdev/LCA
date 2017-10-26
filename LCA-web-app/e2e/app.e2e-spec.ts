@@ -1,10 +1,10 @@
-import { LCAWebAppPage } from './app.po';
+import { AngularAdminLTEPage } from './app.po';
 
-describe('lca-web-app App', () => {
-  let page: LCAWebAppPage;
+describe('angular-admin-lte App', () => {
+  let page: AngularAdminLTEPage;
 
   beforeEach(() => {
-    page = new LCAWebAppPage();
+    page = new AngularAdminLTEPage();
   });
 
   it('should display welcome message', () => {

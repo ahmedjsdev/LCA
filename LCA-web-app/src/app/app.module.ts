@@ -1,29 +1,39 @@
+import { AdminModule } from './admin/admin.module';
+import { AppRoutingModule } from './app-routing/app-routing.module';
 import { BrowserModule } from '@angular/platform-browser';
-import { NgModule, NO_ERRORS_SCHEMA } from '@angular/core';
-import { MDBBootstrapModule } from 'angular-bootstrap-md';
-
-// firebase setup
-import { AngularFireModule } from 'angularfire2';
-import { AngularFireDatabase } from "angularfire2/database";
-import { environment } from '../environments/environment'
+import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
+import { StarterComponent } from './starter/starter.component';
+import { StarterHeaderComponent } from './starter/starter-header/starter-header.component';
+import { StarterLeftSideComponent } from './starter/starter-left-side/starter-left-side.component';
+import { StarterContentComponent } from './starter/starter-content/starter-content.component';
+import { StarterFooterComponent } from './starter/starter-footer/starter-footer.component';
+import { StarterControlSidebarComponent } from './starter/starter-control-sidebar/starter-control-sidebar.component';
+import { AdminComponent } from './admin/admin.component';
+import { AdminHeaderComponent } from './admin/admin-header/admin-header.component';
+import { AdminLeftSideComponent } from './admin/admin-left-side/admin-left-side.component';
+import { AdminContentComponent } from './admin/admin-content/admin-content.component';
+import { AdminFooterComponent } from './admin/admin-footer/admin-footer.component';
+import { AdminControlSidebarComponent } from './admin/admin-control-sidebar/admin-control-sidebar.component';
+import { AdminDashboard1Component } from './admin/admin-dashboard1/admin-dashboard1.component';
 
-
-// Firebase Service 
-import { FirebaseService } from '../app/providers/firebase.service';
 @NgModule({
   declarations: [
     AppComponent,
-    
+    StarterComponent,
+    StarterHeaderComponent,
+    StarterLeftSideComponent,
+    StarterContentComponent,
+    StarterFooterComponent,
+    StarterControlSidebarComponent
   ],
   imports: [
     BrowserModule,
-    MDBBootstrapModule.forRoot(),
-    AngularFireModule.initializeApp(environment.firebase)
+    AppRoutingModule,
+    AdminModule
   ],
-  providers: [FirebaseService, AngularFireDatabase], 
-  bootstrap: [AppComponent],
-  schemas: [NO_ERRORS_SCHEMA]
+  providers: [],
+  bootstrap: [AppComponent]
 })
 export class AppModule { }

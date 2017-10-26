@@ -1,6 +1,6 @@
 import { browser, by, element } from 'protractor';
 
-export class LCAWebAppPage {
+export class AngularAdminLTEPage {
   navigateTo() {
     return browser.get('/');
   }
