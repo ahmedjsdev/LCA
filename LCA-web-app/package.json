@@ -1,6 +1,7 @@
 {
   "name": "angular-admin-lte",
   "version": "0.0.0",
+  "author": "Ahmed Nasser",
   "license": "MIT",
   "scripts": {
     "ng": "ng",
